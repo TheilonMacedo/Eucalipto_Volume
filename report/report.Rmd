@@ -1,0 +1,41 @@
+---
+title: "Relatório de Volumetria Eucalipto"
+subtitle: "Ajuste e avaliação de modelos de Machine Learning para a predição do volume de eucalipto."
+author: "Theilon Macedo"
+geometry: margin=2cm
+date: "22/09/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+targets::tar_read(model_comparison)
+targets::tar_read(metrics_best)
+targets::tar_read(metrics_intermediary)
+```
+
+## Modelo Ajustado
+
+Esse relatório apresenta, de forma breve, os resultados do ajuste do modelo XBGoost para a predição de volume de árvores de eucalipto. Os dados aqui utilizados são oriundos do trabalho realizado por [Azevedo et al. (2020)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0238703). Para o ajuste deste modelo foi utilizado o pacote tidymodels. Este pacote permitiu ajustar e avaliar diversos modelos de Machine Learning que tinham o volume das árvores como resposta.  
+
+Nesta análise, foi possível observar que os modelos de árvores se mostraram bastante eficientes para a predição de volume, tendo destaque o XGBoost, que caracterizou-se como um modelo de elevada qualidade preditiva em nível de múltiplos volumes. Também foi possível avaliar que a adição de termos quadráticos e da interação entre as variáveis Altura e DAP, além da normalização dos dados se mostrou como importantes etapas do pré-processamento para o aumento da qualidade do modelo.  
+
+Foi realizada ainda a comparação do melhor modelo com um modelo de desenpenho inferior, uma Árvore de Decisão neste caso, de modo a observar o comportamento destes modelos frente à base de dados. É imortante resaltar a alta qualidade dos modelos apontado tanto pela reamostragem via validação cruzada k-fold com repetições e no set de teste. A seguir são apresentados os resultados da análise:  
+
+```{r, echo=FALSE, out.width="50%", out.height="30%", fig.cap = "Performance no set de treino dos diversos modelos ajustados de acordo com o RMSE e o R².",fig.show='hold',fig.align='center'}
+knitr::include_graphics(c(here::here("plots", "rmse.png"), here::here("plots", "rsq.png")))
+```
+
+```{r, echo=FALSE, out.width="45%", out.height="25%", fig.cap = "Métricas do modelo XGBoost e do modelo de Árvore de Decisão no set de teste.",fig.show='hold',fig.align='center'}
+knitr::include_graphics(c(here::here("plots", "perf_normalized_xgb.png"),
+                          here::here("plots","perf_normalized_decision_tree.png")))
+```
+
+```{r, echo=FALSE, out.width="60%", out.height="35%", fig.cap = "Comparação entre os valores de volume de árvores de eucalipto observados e preditos pelos modelos ajustados.",fig.show='hold',fig.align='center'}
+knitr::include_graphics(c(here::here("plots", "normalized_xgb.png"),
+                          here::here("plots", "normalized_decision_tree.png")))
+```
+\newpage
+
+## Conclusão
+O modelo XGBoost se mostrou adequado e de alta performance para a predição da volumetria de árvores de eucalipto em múltiplos volumes.
