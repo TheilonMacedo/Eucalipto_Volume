@@ -275,7 +275,7 @@ metrics_mod <- function(best_mod, model_ranked){
                                   font_size = 16) |> 
         kableExtra::save_kable(file = here::here("plots", 
                                                  glue::glue("perf_", name_model, ".png")),
-                               self_contained = T)
+                               self_contained = F)
 }
 
 
