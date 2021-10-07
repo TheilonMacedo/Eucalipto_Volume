@@ -236,7 +236,7 @@ select_models <- function(grid_results, metric = "rmse", rank_posit = 1){
     workflowsets::rank_results(grid_results, select_best = TRUE) |> 
         dplyr::relocate(rank) |> 
         dplyr::select(-c(.config, model, std_err)) |> 
-        dplyr::filter(.metric == "rmse" & rank == rank_posit)
+        dplyr::filter(.metric == "rmse" & rank == rank_posit) 
     
 }
 
