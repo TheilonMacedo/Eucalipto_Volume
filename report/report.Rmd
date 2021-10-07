@@ -32,8 +32,8 @@ knitr::include_graphics(c(here::here("plots", "perf_normalized_xgb.png"),
 ```
 
 ```{r, echo=FALSE, out.width="60%", out.height="35%", fig.cap = "Comparação entre os valores de volume de árvores de eucalipto observados e preditos pelos modelos ajustados.",fig.show='hold',fig.align='center'}
-knitr::include_graphics(c(here::here("plots", "normalized_xgb.png"),
-                          here::here("plots", "normalized_decision_tree.png")))
+knitr::include_graphics(c(here::here("plots", "normalized xgb.png"),
+                          here::here("plots", "normalized decision tree.png")))
 ```
 \newpage
 

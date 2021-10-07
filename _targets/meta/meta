@@ -16,9 +16,9 @@ intermediary_model|stem|b3d2fa6c83efecf4|0aca7058e526e088|053b8212f20abc15|12019
 plot_rsq|stem|9b43f9b05f8b9b94|b4d4b4c542342325|a18ac319cb2567c0|-575673513||t18904.8063325302s|489a723ea2fb36a4|102|rds|vector|||1.81||
 fit_best_mod|stem|e1283287e5c3a4a8|2a6a8b8dc659ba41|17712f7bdee9fda1|-1305921614||t18904.8063324839s|3942a1992d5c35b9|895355|rds|vector|||2.86||
 fit_intermediary_model|stem|389413282710ca5c|640e2cd7f8f97355|443b9dd4ff79a1a8|1646321452||t18904.8063325071s|5e401f4e68dc66b7|325152|rds|vector|||0.53||
-model_comparison|stem|bfe51dc66b275cfe|028d1207f90a14ef|548b1ff395b6a0fd|712259582||t18904.8063325187s|435941677f461efd|26408|rds|vector|||0.83||
 metrics_best|stem|306d6771371fa7c6|92ce086057b7feb9|93d6fe0bffb193e0|1386760206||t18905.7011810327s|faf50c5680486333|287|rds|vector|||2.39||
 metrics_intermediary|stem|62404b23f748f002|bf24b4aab955f572|9328b5fb7292f53a|-959092081||t18905.7012054939s|869d7302423d0db3|291|rds|vector|||2.05||
+model_comparison|stem|ac5deaf9bcc761c1|028d1207f90a14ef|35c2d40efa71f539|712259582||t18907.694982971s|435941677f461efd|26408|rds|vector|||1.13|font family not found in Windows font database|
 preproc_rec|function|97480b56ec6cba27||||||||||||||
 split_data|function|7e3e7c202593b86a||||||||||||||
 test_set_split|function|14d240209ea54c5e||||||||||||||
@@ -36,5 +36,5 @@ kfold_cv|function|58845e105ac91caa||||||||||||||
 scatterplot|function|17ab1321a21bb1c3||||||||||||||
 readind_data|function|f9f709b653e824f5||||||||||||||
 plot_results|function|d0916087c200a8d8||||||||||||||
-accessing_models|function|eb4b63d81637ed42||||||||||||||
-report|stem|6dbcf53511b671d3|b77c631e6d2ffb14|a91f5ac8ccea30ac|-237041703|report/report.pdf*report/report.Rmd|t18905.70240919s|88cf5e0201fabeae|559902|file|vector|||2.11||
+accessing_models|function|54662dbcf28c436f||||||||||||||
+report|stem|05aaf9e9ddbdd69d|b77c631e6d2ffb14|df2e152d44aa92c4|-237041703|report/report.pdf*report/report.Rmd|t18907.6954872432s|87115b6a75cb7882|559999|file|vector|||2.95||

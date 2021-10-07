@@ -261,7 +261,7 @@ fit_model <- function(grid_results, model_ranked, df_split, metric = "rmse"){
 }
 
 
-
+ 
 metrics_mod <- function(best_mod, model_ranked){
     
     name_model <- model_ranked |> purrr::pluck("wflow_id", 1)
@@ -300,15 +300,16 @@ scatterplot <- function(.x, .y){
         ggplot2::theme(text = ggplot2::element_text(family = "Source Code Pro")) -> plot_scatterplot
     
     plot_scatterplot
-    ggplot2::ggsave(glue::glue(.y, ".png"), path = here::here("plots"))
+    ggplot2::ggsave(glue::glue(.y, ".png"), path = here::here("plots")) 
     
 }
 
 
 accessing_models <- function(mod1, mod2, model_ranked1, model_ranked2){
     
-    name_model1 <- model_ranked1 |> purrr::pluck("wflow_id", 1)
-    name_model2 <- model_ranked2 |> purrr::pluck("wflow_id", 1)
+    gsub_und <- function(x) gsub("_", " ", x)
+    name_model1 <- model_ranked1 |> purrr::pluck("wflow_id", 1) |> gsub_und()
+    name_model2 <- model_ranked2 |> purrr::pluck("wflow_id", 1) |> gsub_und()
     
     workflowsets::collect_predictions(mod1) |> 
         dplyr::mutate(model = name_model1) |> 
