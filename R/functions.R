@@ -11,6 +11,12 @@ packages_used <- function(){
     library(doParallel)
     library(extrafont)
     
+    if(!require(xgboost)){
+        install.packages(xgboost)
+    }
+    if(!require(kernlab)){
+        install.packages(kernlab)
+    }
 }
 
 readind_data <- function(){
