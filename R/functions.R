@@ -14,8 +14,13 @@ packages_used <- function(){
     if(!require("xgboost")){
         install.packages("xgboost")
     }
+    
     if(!require("kernlab")){
         install.packages("kernlab")
+    }
+    
+    if(!require("lme4")){
+        install.packages("lme4")
     }
 }
 
