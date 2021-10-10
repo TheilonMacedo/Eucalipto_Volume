@@ -27,6 +27,10 @@ packages_used <- function(){
         install.packages("webshot")
     }
     
+    if(!require("magick")){
+        install.packages("magick")
+    }
+    
     webshot::install_phantomjs()
 }
 
