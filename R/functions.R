@@ -22,6 +22,12 @@ packages_used <- function(){
     if(!require("lme4")){
         install.packages("lme4")
     }
+    
+    if(!require("webshot")){
+        install.packages("webshot")
+    }
+    
+    webshot::install_phantomjs()
 }
 
 readind_data <- function(){
